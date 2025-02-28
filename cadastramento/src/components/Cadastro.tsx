@@ -26,17 +26,8 @@ const Cadastro: React.FC<CadastroProps> = ({ onSubmit, onCancel, atividade }) =>
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        if (!nome ) {
+        if (!nome||!responsavel || !data || !descricao) {
             setError('Todos os campos são obrigatórios.');
-            return;
-        }else if( !responsavel){
-            setError('O campo responsável é obrigatório.');
-            return;
-        }else if( !data){
-            setError('O campo data é obrigatório.');
-            return;
-        }else if( !descricao){
-            setError('O campo descrição é obrigatório.');
             return;
         }
         const hoje = new Date().toISOString().split('T')[0];
@@ -66,6 +57,7 @@ const Cadastro: React.FC<CadastroProps> = ({ onSubmit, onCancel, atividade }) =>
                         type="text"
                         value={nome}
                         onChange={(e) => setNome(e.target.value)}
+                        placeholder='Nome da Atividade'
                         className="w-full border border-gray-300 rounded px-3 py-2"
                     />
                 </div>
@@ -75,6 +67,7 @@ const Cadastro: React.FC<CadastroProps> = ({ onSubmit, onCancel, atividade }) =>
                         type="text"
                         value={responsavel}
                         onChange={(e) => setResponsavel(e.target.value)}
+                        placeholder='Responsável'
                         className="w-full border border-gray-300 rounded px-3 py-2"
                     />
                 </div>
@@ -91,6 +84,7 @@ const Cadastro: React.FC<CadastroProps> = ({ onSubmit, onCancel, atividade }) =>
                 <div>
                     <label className="block">Descrição:</label>
                     <textarea
+                        placeholder='Descrição'
                         value={descricao}
                         onChange={(e) => setDescricao(e.target.value)}
                         className="w-full border border-gray-300 rounded px-3 py-2"
