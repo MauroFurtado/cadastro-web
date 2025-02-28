@@ -21,13 +21,13 @@ Bem-vindo ao Sistema de Atividades Acadêmicas do campus da UFC Sobral. Este pro
 
 ## Estrutura do Projeto
 
-- **components**: Contém os componentes reutilizáveis do projeto.
+- **Components**: Contém os componentes reutilizáveis do projeto.
   - `Apresentacao.tsx`: Componente de apresentação inicial.
   - `Cadastro.tsx`: Componente de cadastro e edição de atividades.
   - `Detalhes.tsx`: Componente para exibir os detalhes de uma atividade.
   - `Listagem.tsx`: Componente para listar as atividades.
   - `Modal.tsx`: Componente de modal para exibir formulários e detalhes.
-- **types**: Contém as definições de tipos TypeScript utilizadas no projeto.
+- **Types**: Contém as definições de tipos TypeScript utilizadas no projeto.
   - `atividade.ts`: Definição do tipo `Atividade`.
 
 ## Instalação
